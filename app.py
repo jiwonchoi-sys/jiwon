@@ -9,7 +9,6 @@ st.write("버튼을 누르면 확률에 따라 보상이 결정돼")
 if "total" not in st.session_state:
     st.session_state.total = 0
 
-st.write(f"현재 점수: {st.session_state.total}")
 
 col1, col2, col3 = st.columns(3)
 
@@ -33,7 +32,3 @@ with col3:
         result = random.choice([8, 3, -1, -2])
         st.session_state.total += result
         st.write(f"C 결과: {result}")
-
-# 리셋 버튼
-if st.button("점수 초기화"):
-    st.session_state.total = 0
